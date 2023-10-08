@@ -11,9 +11,13 @@ public interface UserService {
 
 	Object getUser();
 
-	Object addRole(RoleDto roleDto);
-
 	Object deleteUser(Long id);
+
+	Object addRole(String role, Long rank);
+
+	Object sendMail();
+
+	Object getTopFiveSalriedEmployee();
 	
 
 }

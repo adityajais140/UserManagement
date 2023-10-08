@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -24,12 +25,14 @@ public class User {
 	@OneToOne
 	private User supervisor;
 	
-	@OneToMany
+	@ManyToMany
 	private List<UserRole> roles;
 	
 	@OneToMany
 	private List<User>   teams; 	
 	
 	private boolean isDeleted;
+	
+	private long salary;
 	
 }

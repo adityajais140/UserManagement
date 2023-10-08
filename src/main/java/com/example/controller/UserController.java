@@ -19,7 +19,7 @@ public class UserController {
 
 	public static final String USER = "api/v1/user";
 	public static final String ROLE = "api/v1/role";
-
+	public static final String URL="api/v1/";
 	@Autowired
 	UserService userService;
 
@@ -44,9 +44,20 @@ public class UserController {
     }
 	
 	@PostMapping(ROLE)
-    public Object  addRole(@RequestParam RoleDto roleDto) {
-      return userService.addRole(roleDto);
+    public Object  addRole(@RequestParam String  role,@RequestParam Long rank) {
+      return userService.addRole(role,rank);
     }
+	
+	@PostMapping(URL+"sendMail")
+    public Object  sendMail() {
+      return userService.sendMail();
+    }
+	
+	@GetMapping(URL+"employee")
+	public Object getTopFiveSalriedEmployee() {
+	      return userService.getTopFiveSalriedEmployee();
+
+	}
 	
 	
 

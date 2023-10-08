@@ -20,5 +20,7 @@ public class UserRole {
 	private String role;
 
 	private long rankId;
+	
+	private long salary;
 
 }

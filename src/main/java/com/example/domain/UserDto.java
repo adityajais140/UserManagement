@@ -13,6 +13,9 @@ public class UserDto {
 	
 	long  rank;
 	
+	long salary;
+	
+	long supervisorId;
 	
 
 }
